@@ -1,13 +1,15 @@
+import nltk
 import pandas as pd
 import numpy as np
 import re
 from bs4 import BeautifulSoup
+
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 import distance
 from fuzzywuzzy import fuzz
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
-
 cv = pickle.load(open('cv.pkl', 'rb'))
 # import warningspip
 # warnings.filterwarnings('ignore')
